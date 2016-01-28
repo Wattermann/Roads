@@ -83,7 +83,8 @@ def main():
                 if event.key == pygame.K_ESCAPE:
                     buildClick = 0
                     building = False
-                    buildPos.clear()
+                    #Python3 #buildPos.clear()
+                    del buildPos[:]
                     #print("end build")
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -102,7 +103,8 @@ def main():
                     roadList.append(Road(buildPos[0],buildPos[1],controlPoint01,buildPos[2]))
                     buildClick = 1
                     lastClick = buildPos[2]
-                    buildPos.clear()
+                    #Python3 #buildPos.clear()
+                    del buildPos[:]
                     buildPos.append(lastClick)
                     #print("end build")
 
